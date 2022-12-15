@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {lazy} from "react";
+import "./App.css";
+const Hero = lazy(()=>import("./Components/Hero/Hero")) ;
+const Services = lazy(()=>import("./Components/Services/Services")) ;
+const Skills = lazy(()=>import("./Components/Skills/Skills")) ;
+const Projects = lazy(()=>import("./Components/Projects/Projects")) ;
+const Awards = lazy(()=>import("./Components/Awards/Awards")) ;
+const Contact = lazy(()=>import("./Components/Contact/Contact")) ;
+const Footer = lazy(()=>import("./Components/Footer/Footer")) ;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Hero />
+      <Services/>
+      <Skills/>
+      <Projects/>
+      <Awards/>
+      <Contact/>
+      <Footer/>
+    </>
   );
 }
 
